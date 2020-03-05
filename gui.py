@@ -9,12 +9,15 @@ imap_url = 'imap.gmail.com'
 smtp_url = 'smtp.gmail.com'
 principal = tkinter.Tk()
 mailclient = None
+
 # --------------------------------------SMTP--------------------
 
 def send_email(corpo, subject, to, pagina):
     server = smtp.SMTP(smtp_url,587,user,password,subject,to,corpo)
     server.send()
     pagina.destroy()
+ 
+# -------------------------------------GUI------------------------
 
 def close(pagina):
     mailclient.close()
