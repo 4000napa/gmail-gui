@@ -16,44 +16,6 @@ def send_email(corpo, subject, to, pagina):
     server.send()
     pagina.destroy()
 
-# --------------------------------------IMAP--------------------
-
-
-# def auth(user,password,imap_url):
-#     con = imaplib.IMAP4_SSL(imap_url)
-#     con.login(user,password)
-#     return con
-
-# def get_body(msg):
-#     if msg.is_multipart():
-#         return get_body(msg.get_payload(0))
-#     else:
-#         return msg.get_payload(None,True)
-
-# def get_from(msg):
-#     return msg['from']
-
-# def get_subject(msg):
-#     return msg['subject']
-
-# def search(key,value,con):
-#     result, data  = con.search(None,key,'"{}"'.format(value))
-#     return data
-
-# def get_emails(result_bytes):
-#     msgs = []
-#     for num in result_bytes[0].split():
-#         typ, data = con.fetch(num, '(RFC822)')
-#         msgs.append(data)
-#     return msgs
-
-# def acha_quantidade(con):
-#     string=str(con.select('INBOX'))
-#     quantidade=re.findall(r'\d+', string)[0]
-#     return quantidade
-
-#-------------------------------GUI----------------------------
-
 def close(pagina):
     mailclient.close()
     pagina.destroy()
