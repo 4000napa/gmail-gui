@@ -1,2 +1,2 @@
-# gmailgui
-Interface gráfica básica para acessar o gmail 
+# Interface Gráfica para Gmail
+Trabalho da matéria Redes de Computadores da Universidade de Brasília.
